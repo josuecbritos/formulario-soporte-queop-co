@@ -1,1270 +1,1254 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<META HTTP-EQUIV='content-type' CONTENT='text/html; charset=UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario Tickets Soporte Queop Chile</title>
+
+<style>
+/* Estilos originales de Zoho */
+#zohoSupportWebToCase textarea, 
+#zohoSupportWebToCase input[type='text'], 
+#zohoSupportWebToCase input[type='date'], 
+#zohoSupportWebToCase select, 
+.wb_common {
+    width: 280px;
+}
+
+#zohoSupportWebToCase td {
+    padding: 11px 5px;
+}
+
+#zohoSupportWebToCase textarea, 
+#zohoSupportWebToCase input[type='text'], 
+#zohoSupportWebToCase input[type='date'], 
+#zohoSupportWebToCase select {
+    border: 1px solid #ddd;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+#zohoSupportWebToCase select {
+    box-sizing: unset;
+}
+
+#zohoSupportWebToCase .wb_selectDate {
+    width: auto;
+}
+
+#zohoSupportWebToCase input.wb_cusInput {
+    width: 108px;
+}
+
+.wb_FtCon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.wb_logoCon {
+    display: flex;
+    margin-left: 5px;
+}
+
+.wb_logo {
+    max-width: 16px;
+    max-height: 16px;
+}
+
+#zohoSupportWebToCase .wb_multi_pick {
+    border: 1px solid #ddd;
+    padding: 3px 5px;
+    border-radius: 3px;
+    width: 280px;
+    height: 95px;
+    overflow-y: auto;
+}
+
+#zohoSupportWebToCase .wb_multi_pick_label {
+    display: block;
+}
+
+#zohoSupportWebToCase .wb_multi_pick_input,
+.wb_multi_pick_input_all {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.zsFormClass {
+    background-color: #FFFFFF;
+    width: 600px;
+}
+
+.zsFontClass {
+    color: #000000;
+    font-family: Arial;
+    font-size: 13px;
+}
+
+.manfieldbdr {
+    border-left: 1px solid #ff6448!important;
+}
+
+.hleft {
+    text-align: left;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+.wtcsepcode {
+    margin: 0px 15px;
+    color: #aaa;
+    float: left;
+}
+
+.wtccloudattach {
+    float: left;
+    color: #00a3fe!important;
+    cursor: pointer;
+    text-decoration: none!important;
+}
+
+.wtccloudattach:hover {
+    text-decoration: none!important;
+}
+
+.wtcuploadinput {
+    cursor: pointer;
+    float: left;
+    width: 62px;
+    margin-top: -20px;
+    opacity: 0;
+    clear: both;
+}
+
+.wtcuploadfile {
+    float: left;
+    color: #00a3fe;
+}
+
+.filenamecls {
+    margin-right: 15px;
+    float: left;
+    margin-top: 5px;
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.filenamecls a {
+    color: #ff4444;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.filenamecls a:hover {
+    color: #cc0000;
+}
+
+.filenamecls button {
+    color: #ff4444;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.filenamecls button:hover {
+    color: #cc0000;
+}
+
+.clboth {
+    clear: both;
+}
+
+#zsFileBrowseAttachments {
+    clear: both;
+    margin: 10px 0px;
+}
+
+.attachment-icon {
+    color: #00b4a8;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.zsFontClass {
+    vertical-align: top;
+}
+
+#tooltip-zc {
+    font: normal 12px Arial, Helvetica, sans-serif;
+    line-height: 18px;
+    position: absolute;
+    padding: 8px;
+    margin: 20px 0 0;
+    background: #fff;
+    border: 1px solid #528dd1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: #777;
+    -webkit-box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    -moz-box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    z-index: 10000;
+}
+
+.wtcmanfield {
+    color: #f00;
+    font-size: 16px;
+    position: relative;
+    top: 2px;
+    left: 1px;
+}
+
+#zsCloudAttachmentIframe {
+    width: 100%;
+    height: 100%;
+    z-index: 99999!important;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    border-style: none;
+    display: none;
+    background-color: #fff;
+}
+
+.wtchelpinfo {
+    background-position: -246px -485px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    background-image: url(https://static.zohocdn.com/zohodeskstatic/app/images/zs-mpro.b6c9cf2347c62390fdcb.png);
+}
+
+.zsMaxSizeMessage {
+    font-size: 13px;
+}
+
+/* ESTILOS RESPONSIVOS */
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#zohoSupportWebToCase {
+    max-width: 100%;
+    padding: 0;
+    flex: 1;
+}
+
+.zsFormClass {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    min-height: auto;
+}
+
+.zsFormClass table {
+    width: 100%;
+}
+
+.zsFormClass td {
+    display: block;
+    width: 100%!important;
+    text-align: left!important;
+}
+
+.zsFormClass td[colspan="2"] {
+    text-align: center!important;
+}
+
+#zohoSupportWebToCase textarea,
+#zohoSupportWebToCase input[type='text'],
+#zohoSupportWebToCase input[type='date'],
+#zohoSupportWebToCase select {
+    width: 100%!important;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+}
+
+#zohoSupportWebToCase textarea:focus,
+#zohoSupportWebToCase input[type='text']:focus,
+#zohoSupportWebToCase input[type='date']:focus,
+#zohoSupportWebToCase select:focus {
+    background-color: #ffffff;
+}
+
+#zohoSupportWebToCase textarea {
+    min-height: 120px;
+    font-family: Arial, sans-serif;
+}
+
+.zsFormClass strong {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+    font-family: Arial;
+    color: #000000;
+    font-weight: normal;
+}
+
+.form-instructions {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.field-example {
+    color: #999;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Header fijo */
+.form-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-header img {
+    max-width: 120px;
+    height: auto;
+}
+
+.form-header-title {
+    font-size: 1.8rem;
+    color: #000000;
+    font-weight: normal;
+    font-family: Arial;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Footer */
+.form-footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 13px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 30px;
+}
+
+/* Botones responsivos */
+.zsFormClass input[type='submit'],
+.zsFormClass input[type='button'] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.zsFormClass input[type='submit'] {
+    background-color: #00b4a8;
+    color: white;
+}
+
+.zsFormClass input[type='submit']:hover {
+    background-color: #009a8f;
+}
+
+.zsFormClass input[type='button'] {
+    background-color: #f44336;
+    color: white;
+}
+
+.zsFormClass input[type='button']:hover {
+    background-color: #da190b;
+}
+
+/* Captcha responsivo */
+#zsCaptcha {
+    text-align: center;
+}
+
+#zsCaptcha img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Archivos adjuntos */
+.wtcuploadfile {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#zsMaxSizeMessage,
+#zsMaxLimitMessage {
+    font-size: 11px!important;
+    display: block!important;
+    float: none!important;
+    margin: 5px 0!important;
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+    .zsFormClass td {
+        display: table-cell;
+    }
+    
+    .zsFormClass td[width='25%'] {
+        width: 25%!important;
+    }
+    
+    .zsFormClass td[width='75%'] {
+        width: 75%!important;
+    }
+    
+    #zohoSupportWebToCase textarea,
+    #zohoSupportWebToCase input[type='text'],
+    #zohoSupportWebToCase select {
+        width: 280px!important;
+    }
+    
+    .zsFormClass input[type='submit'],
+    .zsFormClass input[type='button'] {
+        width: auto;
+        min-width: 120px;
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+/* Móviles pequeños */
+@media screen and (max-width: 480px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .zsFormClass {
+        padding: 15px;
+    }
+    
+    .zsFormClass strong {
+        font-size: 1.1rem;
+    }
+    
+    .form-instructions {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
+    .field-example {
+        font-size: 11px;
+    }
+    
+    .zsFontClass {
+        font-size: 12px;
+    }
+    
+    #zohoSupportWebToCase textarea,
+    #zohoSupportWebToCase input[type='text'],
+    #zohoSupportWebToCase select {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    #zohoSupportWebToCase td {
+        padding: 8px 5px;
+    }
+    
+    .zsFormClass input[type='submit'],
+    .zsFormClass input[type='button'] {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .form-header {
+        padding: 12px 15px;
+        gap: 10px;
+    }
+    
+    .form-header img {
+        max-width: 80px;
+    }
+    
+    .form-header-title {
+        font-size: 1.4rem;
+    }
+    
+    .zsFormClass strong {
+        font-size: 1.05rem;
+    }
+    
+    .form-footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+}
+</style>
+
+<script src='https://static.zohocdn.com/zohodeskstatic/app/js/jqueryandencoder.ef05974972bf3bca1b87.js'></script>
+<script>
+window.addEventListener('pageshow', function () {
+const submitButton = document.getElementById('zsSubmitButton_1245088000001074158');
+if (submitButton) {
+  submitButton.removeAttribute('disabled');
+}
+const captchaTextField = document.forms['zsWebToCase_1245088000001074158']['zsWebFormCaptchaWord'];
+if(window.zsRegenerateCaptcha && captchaTextField && captchaTextField.value) {
+captchaTextField.value = '';
+captchaTextField.focus();
+zsRegenerateCaptcha();
+}
+});
+
+function trimBoth(str){
+return jQuery.trim(str);
+}
+
+function setAllDependancyFieldsMapping(){
+var mapDependancyLabels = getMapDependenySelectValues(jQuery("[id='property(module)']").val(), "JSON_MAP_DEP_LABELS");
+if(mapDependancyLabels){
+for(var i = 0; i < mapDependancyLabels.length; i++){
+var label = mapDependancyLabels[i];
+var obj = document.forms['zsWebToCase_1245088000001074158'][label];
+if(obj){
+setDependent(obj, true);
+}
+}
+}
+}
+
+function getMapDependenySelectValues(module, key){
+var dependencyObj = jQuery.parseJSON( jQuery("[id='dependent_field_values_" + module + "']").val() );
+if(dependencyObj == undefined){
+return dependencyObj;
+}
+return dependencyObj[key];
+}
+
+function setDependent(obj, isload){
+var name = obj.id || (obj[0] && obj[0].id) || "";
+var module = jQuery("[id='property(module)']").val();
+var val = "";
+var myObject = getMapDependenySelectValues(module, "JSON_VALUES");
+if(myObject !=undefined){
+val = myObject[name];
+}
+var mySelObject = getMapDependenySelectValues(module, "JSON_SELECT_VALUES");
+if(val != null && val != "" && val != "null" && mySelObject){
+var fields = val;
+for(var i in fields){
+if (fields.hasOwnProperty(i)){
+var isDependent = false;
+var label = i;
+var values = fields[i];
+if(label.indexOf(")") > -1){
+label = label.replace(/\)/g, '_____');
+}
+if(label.indexOf("(") > -1){
+label = label.replace(/\(/g, '____');
+}
+if(label.indexOf(".") > -1){
+label = label.replace(/\./g, '___');
+}
+var depObj = document.forms['zsWebToCase_1245088000001074158'][label];
+if(depObj && depObj.options){
+var mapValues = "";
+var selected_val = depObj.value;
+var depLen = depObj.options.length-1;
+for (var n = depLen; n >= 0; n--) {
+if (depObj.options[n].selected){
+if(mapValues == ""){
+mapValues = depObj.options[n].value;
+}else{
+mapValues = mapValues + ";;;"+depObj.options[n].value;
+}
+}
+}
+depObj.value = "";
+var selectValues = mySelObject[label];
+for(var k in values){
+var rat = k;
+if(rat == "-None-"){
+rat = "";
+}
+var parentValues = mySelObject[name];
+if(rat == trimBoth(obj.value)){
+isDependent = true;
+depObj.length = 0;
+var depvalues = values[k];
+var depLen = depvalues.length - 1;
+for(var j = 0; j <= depLen; j++){
+var optionElement = document.createElement("OPTION");
+var displayValue = depvalues[j];
+var actualValue = displayValue;
+if(actualValue == "-None-"){
+optionElement.value = "";
+displayValue = "-None-";
+}else{
+optionElement.value = actualValue;
+}
+optionElement.text = displayValue;
+if(mapValues != undefined){
+var mapValue = mapValues.split(";;;");
+var len = mapValue.length;
+for(var p = 0; p < len; p++){
+if(actualValue == mapValue[p]){
+optionElement.selected = true;
+}
+}
+}
+depObj.options.add(optionElement);
+}
+}
+}
+if(!isDependent){
+depObj.length = 0;
+var len = selectValues.length;
+for(var j = 0; j < len; j++){
+var actualValue = selectValues[j];
+var optionElement = document.createElement("OPTION");
+if(actualValue == "-None-"){
+optionElement.value = "";
+}else{
+optionElement.value = selectValues[j];
+}
+optionElement.text = selectValues[j];
+depObj.options.add(optionElement);
+}
+depObj.value =  selected_val;
+}
+if(!isload){
+setDependent(depObj,false);
+}
+var jdepObj = jQuery(depObj);
+if(jdepObj.hasClass('select2-offscreen')){
+jdepObj.select2("val", jdepObj.val());
+}
+}
+}
+}
+}
+}
+
+function setSelectAll(id){
+var parentElement = document.getElementById(id);
+var hiddenInput = parentElement.querySelector('#hiddenoptions');
+var selectAllElement = parentElement.querySelector('#selectall' + id);
+var selectedValues = [];
+var checkboxes = parentElement.querySelectorAll('.wb_multi_pick_input');
+checkboxes.forEach(function (cb) {
+cb.checked = selectAllElement.checked;
+if (cb.checked && cb.value) {
+selectedValues.push(cb.value);
+}
+});
+hiddenInput.value = selectedValues.join(',');
+}
+
+function setMultiSelectOption(id, obj){
+var parentElement = document.getElementById(id);
+var hiddenInput = parentElement.querySelector('#hiddenoptions');
+var selectAllElement = parentElement.querySelector('#selectall' + id);
+var selectedStr = hiddenInput.value;
+var selectedValues = selectedStr ? selectedStr.split(',') : [];
+if(obj.checked && obj.value) {
+selectedValues.push(obj.value);
+}else if(!obj.checked && obj.value) {
+selectedValues.splice(selectedValues.indexOf(obj.value), 1);
+selectAllElement.checked = false;
+}else {
+selectAllElement.checked = false;
+}
+hiddenInput.value = selectedValues.join(',');
+}
+
+var zctt = function(){
+var tt, mw = 400, top = 10, left = 0, doctt = document;
+var ieb = doctt.all ? true : false;
+return{
+showtt: function(cont, wid){
+if(tt == null){
+tt = doctt.createElement('div');
+tt.setAttribute('id', 'tooltip-zc');
+doctt.body.appendChild(tt);
+doctt.onmousemove = this.setpos;
+doctt.onclick = this.hidett;
+}
+tt.style.display = 'block';
+tt.innerHTML = cont;
+tt.style.width = wid ? wid + 'px' : 'auto';
+if(!wid && ieb){
+tt.style.width = tt.offsetWidth;
+}
+if(tt.offsetWidth > mw){
+tt.style.width = mw + 'px'
+}
+h = parseInt(tt.offsetHeight) + top;
+w = parseInt(tt.offsetWidth) + left;
+},
+hidett: function(){
+tt.style.display = 'none';
+},
+setpos: function(e){
+var u = ieb ? event.clientY + doctt.body.scrollTop : e.pageY;
+var l = ieb ? event.clientX + doctt.body.scrollLeft : e.pageX;
+var cw = doctt.body.clientWidth;
+var ch = doctt.body.clientHeight;
+if(l < 0){
+tt.style.left = left + 'px';
+tt.style.right = '';
+}else if((l+w+left) > cw){
+tt.style.left = '';
+tt.style.right = ((cw-l) + left) + 'px';
+}else{
+tt.style.right = '';
+tt.style.left = (l + left) + 'px';
+}
+if(u < 0){
+tt.style.top = top + 'px';
+tt.style.bottom = '';
+}else if((u + h + left) > ch){
+tt.style.top = '';
+tt.style.bottom = ((ch - u) + top) + 'px';
+}else{
+tt.style.bottom = '';
+tt.style.top = (u + top) + 'px';
+}
+}
+};
+}();
+
+var zsWebFormMandatoryFields = new Array("Contact Name","Cliente","Email","Subject");
+var zsFieldsDisplayLabelArray = new Array("Nombre y Apellido","Empresa","Correo electrónico","Solicitud");
+
+function reformatAllDateFields() {
+const dateFields = document.querySelectorAll('.dob-field');
+dateFields.forEach(field => {
+if (field.value && field.value.includes('-')) {
+const parts = field.value.split('-');
+if (parts.length === 3) {
+const [yyyy, mm, dd] = parts;
+field.type= 'text';
+field.value = `${dd}/${mm}/${yyyy}`;
+}
+}
+});
+}
+
+function zsValidateMandatoryFields(){
+var name = '';
+var email = '';
+var isError = 0;
+for(var index = 0; index < zsWebFormMandatoryFields.length; index++){
+isError = 0;
+var fieldObject = document.forms['zsWebToCase_1245088000001074158'][zsWebFormMandatoryFields[index]];
+if(fieldObject){
+if(((fieldObject.value).replace(/^\s+|\s+$/g, '')).length == 0){
+alert(zsFieldsDisplayLabelArray[index] +' no puede estar vacío ');
+fieldObject.focus();
+isError = 1;
+return false;
+}else{
+if(fieldObject.name == 'Email'){
+if(!fieldObject.value.match(/^([\w_][\w\-_.+\'&]*)@(?=.{4,256}$)(([\w]+)([\-_]*[\w])*[\.])+[a-zA-Z]{2,22}$/)){
+isError = 1;
+alert('Introduzca una ID de correo electrónico válida');
+fieldObject.focus();
+return false;
+}
+}
+}
+if(fieldObject.nodeName == 'SELECT'){
+if(fieldObject.options[fieldObject.selectedIndex].value == '-None-'){
+alert(zsFieldsDisplayLabelArray[index] +' no puede ser nulo');
+fieldObject.focus();
+isError = 1;
+return false;
+}
+}
+if(fieldObject.type == 'checkbox'){
+if (fieldObject.checked == false){
+alert('Acepte por favor '+zsFieldsDisplayLabelArray[index]);
+fieldObject.focus();
+isError = 1;
+return false;
+}
+}
+}
+}
+if(isError == 0){
+if(document.forms['zsWebToCase_1245088000001074158']['zsWebFormCaptchaWord'].value.replace(/^\s+|\s+$/g, '').length == 0){
+alert('Introduzca el código captcha');
+document.forms['zsWebToCase_1245088000001074158']['zsWebFormCaptchaWord'].focus();
+return false;
+}
+}
+if(isError == 0){
+reformatAllDateFields();
+document.getElementById('zsSubmitButton_1245088000001074158').setAttribute('disabled', 'disabled');
+}
+}
+
+var ZSEncoder = {
+encodeForHTML : function(str){
+if(str && typeof(str)==='string'){
+return jQuery.encoder.encodeForHTML(str);
+}
+return str;
+},
+encodeForHTMLAttribute : function(str) {
+if(str && typeof(str)==='string'){
+return jQuery.encoder.encodeForHTMLAttribute(str);
+}
+return str;
+},
+encodeForJavascript : function(str) {
+if(str && typeof(str)==='string'){
+return jQuery.encoder.encodeForJavascript(str);
+}
+return str;
+},
+encodeForCSS : function(str) {
+if(str && typeof(str)==='string'){
+return jQuery.encoder.encodeForCSS(str);
+}
+return str;
+}
+};
+
+var zsAttachedAttachmentsCount = 0;
+var zsAllowedAttachmentLimit = 4;
+var zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5];
+
+function zsOpenCloudPickerIframe(){
+if(zsAttachedAttachmentsCount < 5){
+var zsCloudPickerIframeSrc = jQuery('#zsCloudPickerIframeSrc').val();
+jQuery('#zsCloudAttachmentIframe').attr('src', zsCloudPickerIframeSrc.substring(0, zsCloudPickerIframeSrc.length - 1) + (5 - zsAttachedAttachmentsCount)).show();
+zsListenCloudPickerMessages();
+}
+}
+
+function zsListenCloudPickerMessages(){
+if(window.addEventListener){
+window.addEventListener('message', zsWebReceiveMessage, false);
+}else if(window.attachEvent){
+window.attachEvent('onmessage', zsWebReceiveMessage);
+}
+}
+
+var zsCloudPickerJSON = {};
+
+function zsWebReceiveMessage(event){
+var zsUrlRegex = /^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\:\'\/\\+=&amp;%\$#_]*)?$/;
+if(zsUrlRegex.test(event.origin)){
+var zsMessageType = event.data.split('&&&');
+if(zsMessageType[0] == 'zsCloudPickerMessage'){
+if(window.addEventListener){
+window.removeEventListener('message', zsWebReceiveMessage, false);
+}else if(window.attachEvent){
+window.detachEvent('onmessage', zsWebReceiveMessage );
+}
+jQuery('#zsCloudAttachmentIframe').hide();
+var isAttachedFilesDetails = zsMessageType[1].split('|||');
+if(isAttachedFilesDetails[0] == 'cloudPickerResponse'){
+var zsCloudPickerAttachmentDetails = isAttachedFilesDetails[1].split('::::');
+var zsCloudPickerAttachmentsJSON = jQuery.parseJSON(zsCloudPickerAttachmentDetails[0]);
+if(zsAttachedAttachmentsCount <= zsAllowedAttachmentLimit){
+zsRenderCloudAttachments(zsCloudPickerAttachmentsJSON);
+}else{
+alert('No puede agregar más de 5 archivos');
+return false;
+}
+}
+}
+}
+}
+
+function zsRenderCloudAttachments(zsCloudPickerAttachmentsJSON){
+if(!jQuery.isEmptyObject(zsCloudPickerAttachmentsJSON)){
+jQuery.each(zsCloudPickerAttachmentsJSON, function(cloudServiceName, attachments){
+var zsAttachmentsArray = [];
+if(!jQuery.isEmptyObject(zsCloudPickerJSON[cloudServiceName])){
+zsAttachmentsArray = zsCloudPickerJSON[cloudServiceName];
+}
+for(var attachmentsIndex = 0; attachmentsIndex < attachments.length; attachmentsIndex++){
+if(zsAttachedAttachmentsCount <= zsAllowedAttachmentLimit){
+var zsCloudAttachmentsList = '';
+var attachmentsDetailJSON = attachments[attachmentsIndex];
+var zsCloudAttachmentName = attachmentsDetailJSON['docName'];
+var extension = zsCloudAttachmentName.split('.').pop().toLowerCase();
+var unSupportedExtensions = ["ade","adp","apk","appx","appxbundle","bat","cab","cer","chm","cmd","com","cpl","dll","dmg","exe","hlp","hta","ins","iso","isp","jar","js","jse","lnk","mde","msc","msi","msix","msixbundle","msp","mst","nsh","pif","ps1","pst","reg","scr","sct","shb","sys","tmp","url","vb","vbe","vbs","vxd","wsc","wsf","wsh","terminal"];
+if(unSupportedExtensions.indexOf(extension)!=-1){
+alert("El archivo no se ha adjuntado porque su extensión no es compatible.");
+continue;
+}
+zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1;
+var zsCloudAttachmentId = attachmentsDetailJSON['docId'];
+zsCloudAttachmentId = zsCloudAttachmentId.replace(/\s/g, '');
+zsCloudAttachmentsList = '<div class="filenamecls zsFontClass"><span class="attachment-icon">📎</span>'+ZSEncoder.encodeForHTML(zsCloudAttachmentName)+'<button type="button" id="'+ ZSEncoder.encodeForHTMLAttribute(zsCloudAttachmentId) +'" cloudservice="'+ ZSEncoder.encodeForHTMLAttribute(cloudServiceName) +'" class="zscloudAttachment">×</button></div>';
+jQuery('#zsFileBrowseAttachments').append(zsCloudAttachmentsList);
+zsAttachmentsArray.push(attachmentsDetailJSON);
+zsCloudPickerJSON[cloudServiceName] = zsAttachmentsArray;
+jQuery("input[name='zsCloudPickerAttachments']")[0].value = JSON.stringify(zsCloudPickerJSON);
+}
+}
+});
+}
+zsChangeMousePointer();
+}
+
+jQuery(document).off('click.cAtm').on('click.cAtm','.zscloudAttachment', function(){
+var cloudService = jQuery(this).attr('cloudservice');
+var cloudAttachmentId = jQuery(this).attr('id');
+var zsCloudAttachmentsArr = zsCloudPickerJSON[cloudService];
+var isZsCloudAttachmentRemoved = 0;
+for(var attachmentsIndex = 0; attachmentsIndex < zsCloudAttachmentsArr.length; attachmentsIndex++){
+if(isZsCloudAttachmentRemoved != 1){
+jQuery.each(zsCloudAttachmentsArr[attachmentsIndex], function(attachmentsDetailJsonKey, attachmentsDetailJsonValue){
+if(attachmentsDetailJsonKey == 'docId' && attachmentsDetailJsonValue.replace(/\s/g, '') == cloudAttachmentId){
+var zsAttachmentToBeRemoved = jQuery.inArray(zsCloudAttachmentsArr[attachmentsIndex], zsCloudAttachmentsArr);
+zsCloudAttachmentsArr.splice(zsAttachmentToBeRemoved, 1);
+isZsCloudAttachmentRemoved = 1;
+}
+});
+}
+}
+jQuery(this).parent().remove();
+zsAttachedAttachmentsCount = zsAttachedAttachmentsCount - 1;
+jQuery("input[name='zsCloudPickerAttachments']")[0].value = JSON.stringify(zsCloudPickerJSON);
+zsChangeMousePointer();
+});
+
+function zsRenderBrowseFileAttachment(zsAttachmentObject, zsAttachmentDetails){
+if(zsAttachmentObject != ''){
+if((zsAttachmentDetails.files && (zsAttachmentDetails.files[0].size/(1024*1024))>20)){
+zsAttachmentDetails.value='';
+alert('El tamaño de archivo máximo permitido es 20MB.');
+return;
+}
+if(zsAttachedAttachmentsCount < 5){
+var zsFileName='';
+if((zsAttachmentObject.indexOf('\\') > -1)){
+var zsAttachmentDataSplits = zsAttachmentObject.split('\\');
+var zsAttachmentDataSplitsLen = zsAttachmentDataSplits.length;
+zsFileName = zsAttachmentDataSplits[zsAttachmentDataSplitsLen - 1];
+}else{
+zsFileName = zsAttachmentObject;
+}
+var extension = zsFileName.split('.').pop().toLowerCase();
+var unSupportedExtensions = ["ade","adp","apk","appx","appxbundle","bat","cab","cer","chm","cmd","com","cpl","dll","dmg","exe","hlp","hta","ins","iso","isp","jar","js","jse","lnk","mde","msc","msi","msix","msixbundle","msp","mst","nsh","pif","ps1","pst","reg","scr","sct","shb","sys","tmp","url","vb","vbe","vbs","vxd","wsc","wsf","wsh","terminal"];
+if(unSupportedExtensions.indexOf(extension)!=-1){
+alert("El archivo no se ha adjuntado porque su extensión no es compatible.");
+return;
+}
+var zsCurrentAttachmentIdTokens = jQuery(zsAttachmentDetails).attr('id').split('_');
+var zsCurrentAttachmentId = parseInt(zsCurrentAttachmentIdTokens[1]);
+var zsAttachmentIdToBeRemoved = jQuery.inArray(zsCurrentAttachmentId, zsAttachmentFileBrowserIdsList);
+zsAttachmentFileBrowserIdsList.splice(zsAttachmentIdToBeRemoved, 1);
+var zsNextAttachmentId = zsAttachmentFileBrowserIdsList[0];
+var zsnextAttachment = 'zsattachment_'+zsNextAttachmentId;
+jQuery('#zsattachment_'+zsCurrentAttachmentId).hide();
+jQuery('#'+zsnextAttachment).show();
+jQuery('#zsFileBrowseAttachments').append('<div class="filenamecls zsFontClass" id="file_'+zsCurrentAttachmentId+'"><span class="attachment-icon">📎</span>'+ ZSEncoder.encodeForHTML(zsFileName) + '<button type="button" class="zsfilebrowseAttachment" id="fileclose_'+zsCurrentAttachmentId+'">×</button></div>');
+zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1;
+}
+}
+zsChangeMousePointer();
+}
+
+jQuery(document).off('click.fba').on('click.fba', '.zsfilebrowseAttachment', function(){
+var currentlyDeletedElement = jQuery(this).attr('id').split('_')[1];
+jQuery('#zsattachment_'+currentlyDeletedElement).val('');
+jQuery('#zsattachment_'+currentlyDeletedElement).replaceWith(jQuery('#zsattachment_'+currentlyDeletedElement).clone());
+jQuery(this).parent().remove();
+zsAttachedAttachmentsCount = zsAttachedAttachmentsCount - 1;
+zsAttachmentFileBrowserIdsList.push(parseInt(currentlyDeletedElement));
+zsRearrangeFileBrowseAttachments();
+zsChangeMousePointer();
+});
+
+function zsRearrangeFileBrowseAttachments(){
+jQuery.each(jQuery('input[type = file]'), function(fileIndex, fileObject){
+fileIndex = fileIndex + 1;
+if(fileIndex == zsAttachmentFileBrowserIdsList[0]){
+jQuery('#zsattachment_'+fileIndex).show();
+}else{
+jQuery('#zsattachment_'+fileIndex).hide();
+}
+});
+}
+
+function zsOpenFileBrowseAttachment(clickEvent){
+if(zsAttachedAttachmentsCount >= 5){
+clickEvent.preventDefault();
+}
+}
+
+function zsChangeMousePointer(){
+if(zsAttachedAttachmentsCount >= 5){
+jQuery('#zsMaxLimitMessage').show();
+jQuery('#zsattachment_1,#zsattachment_2,#zsattachment_3,#zsattachment_4,#zsattachment_5').hide();
+jQuery('#zsBrowseAttachment,#zsCloudAttachment').css('cursor', 'default');
+}else{
+jQuery('#zsMaxLimitMessage').hide();
+zsRearrangeFileBrowseAttachments();
+jQuery('#zsBrowseAttachment,#zsCloudAttachment').css('cursor', 'pointer');
+}
+}
+
+function zsShowCaptcha(){
+jQuery('#zsCaptchaLoading').hide();
+jQuery('#zsCaptcha').show();
+}
+
+function zsRegenerateCaptcha(){
+var webFormxhr = {};
+webFormxhr = new XMLHttpRequest();
+webFormxhr.open('GET','https://desk.zoho.com/support/GenerateCaptcha?action=getNewCaptcha&_='+new Date().getTime(),true);
+webFormxhr.onreadystatechange = function () {
+if(webFormxhr.readyState === 4 && webFormxhr.status === 200) {
+try{
+var response = (webFormxhr.responseText != null) ? JSON.parse(webFormxhr.responseText) : '';
+jQuery('#zsCaptchaUrl').load(zsShowCaptcha);
+document.getElementById('zsCaptchaUrl').src = response.captchaUrl;
+document.getElementsByName('xJdfEaS')[0].value = response.captchaDigest;
+}catch(e){}
+}
+};
+webFormxhr.send();
+}
+
+document.addEventListener('readystatechange',function(){
+if(document.readyState === 'complete' && window.zsRegenerateCaptcha){
+zsRegenerateCaptcha();
+}
+setAllDependancyFieldsMapping();
+document.getElementById('zsSubmitButton_1245088000001074158').removeAttribute('disabled');
+zsAttachedAttachmentsCount = 0;
+zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5];
+document.forms['zsWebToCase_1245088000001074158']['zsWebFormCaptchaWord'].value = '';
+jQuery('#zsFileBrowseAttachments').html('');
+jQuery.each(jQuery('input[type = file]'), function(fileIndex, fileObject){
+var zsAttachmentId = jQuery(fileObject).attr('id');
+var zsAttachmentNo = zsAttachmentId.split('_')[1];
+var zsAttachedFile = jQuery('#zsattachment_'+zsAttachmentNo);
+if(zsAttachedFile[0] != undefined && zsAttachedFile[0].files[0] != undefined){
+var zsFileBrowserAttachmentHtml = '';
+zsAttachedFileName = zsAttachedFile[0].files[0].name;
+zsFileBrowserAttachmentHtml = '<div class="filenamecls zsFontClass" id="file_'+zsAttachmentNo+'"><span class="attachment-icon">📎</span>'+ ZSEncoder.encodeForHTML(zsAttachedFileName) +'<button type="button" class="zsfilebrowseAttachment" id="fileclose_'+zsAttachmentNo+'">×</button></div>';
+jQuery('#zsFileBrowseAttachments').append(zsFileBrowserAttachmentHtml);
+zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1;
+var zsAttachmentIdToBeRemoved = jQuery.inArray(parseInt(zsAttachmentNo), zsAttachmentFileBrowserIdsList);
+zsAttachmentFileBrowserIdsList.splice(zsAttachmentIdToBeRemoved, 1);
+}
+});
+if(document.forms['zsWebToCase_1245088000001074158']['zsCloudPickerAttachments'] != undefined){
+var zsCloudAttachments = jQuery.parseJSON(document.forms['zsWebToCase_1245088000001074158']['zsCloudPickerAttachments'].value);
+zsRenderCloudAttachments(zsCloudAttachments);
+}
+zsRearrangeFileBrowseAttachments();
+zsChangeMousePointer();
+});
+
+function zsResetWebForm(webFormId){
+document.forms['zsWebToCase_'+webFormId].reset();
+document.getElementById('zsSubmitButton_1245088000001074158').removeAttribute('disabled');
+setAllDependancyFieldsMapping();
+zsAttachedAttachmentsCount = 0;
+zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5];
+jQuery('#zsFileBrowseAttachments').html('');
+zsCloudPickerJSON = {};
+if(document.forms['zsWebToCase_1245088000001074158']['zsCloudPickerAttachments'] != undefined){
+document.forms['zsWebToCase_1245088000001074158']['zsCloudPickerAttachments'].value = JSON.stringify({});
+}
+zsRearrangeFileBrowseAttachments();
+zsChangeMousePointer();
+}
+</script>
 </head>
+
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;META HTTP-EQUIV='content-type' CONTENT='text/html; charset=UTF-8'&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">&lt;title&gt;Formulario Tickets Soporte Queop Chile&lt;/title&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1">/* Estilos originales de Zoho */</p>
-<p class="p1">#zohoSupportWebToCase textarea,<span class="Apple-converted-space"> </span></p>
-<p class="p1">#zohoSupportWebToCase input[type='text'],<span class="Apple-converted-space"> </span></p>
-<p class="p1">#zohoSupportWebToCase input[type='date'],<span class="Apple-converted-space"> </span></p>
-<p class="p1">#zohoSupportWebToCase select,<span class="Apple-converted-space"> </span></p>
-<p class="p1">.wb_common {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 280px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase td {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 11px 5px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase textarea,<span class="Apple-converted-space"> </span></p>
-<p class="p1">#zohoSupportWebToCase input[type='text'],<span class="Apple-converted-space"> </span></p>
-<p class="p1">#zohoSupportWebToCase input[type='date'],<span class="Apple-converted-space"> </span></p>
-<p class="p1">#zohoSupportWebToCase select {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid #ddd;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 3px 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 3px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase select {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-sizing: unset;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase .wb_selectDate {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: auto;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase input.wb_cusInput {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 108px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.wb_FtCon {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>justify-content: flex-end;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding-left: 10px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.wb_logoCon {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-left: 5px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.wb_logo {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-height: 16px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase .wb_multi_pick {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid #ddd;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 3px 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 3px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 280px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>height: 95px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>overflow-y: auto;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase .wb_multi_pick_label {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase .wb_multi_pick_input,</p>
-<p class="p1">.wb_multi_pick_input_all {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>vertical-align: middle;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-right: 5px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFormClass {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #FFFFFF;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 600px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFontClass {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #000000;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-family: Arial;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 13px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.manfieldbdr {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-left: 1px solid #ff6448!important;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.hleft {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: left;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">input[type=file]::-webkit-file-upload-button {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.wtcsepcode {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0px 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #aaa;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>float: left;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.wtccloudattach {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>float: left;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #00a3fe!important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none!important;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.wtccloudattach:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none!important;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.wtcuploadinput {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>float: left;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 62px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top: -20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>opacity: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>clear: both;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.wtcuploadfile {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>float: left;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #00a3fe;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.filenamecls {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-right: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>float: left;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 8px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #f0f0f0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: inline-flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 8px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.filenamecls a {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #ff4444;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 0;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.filenamecls a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #cc0000;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.filenamecls button {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #ff4444;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 0;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.filenamecls button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #cc0000;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.clboth {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>clear: both;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zsFileBrowseAttachments {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>clear: both;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 10px 0px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.attachment-icon {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #00b4a8;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-right: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: bold;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFontClass {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>vertical-align: top;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#tooltip-zc {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font: normal 12px Arial, Helvetica, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 20px 0 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid #528dd1;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>-moz-border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>-webkit-border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #777;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>-webkit-box-shadow: 5px 5px 20px rgba(0,0,0,0.2);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>-moz-box-shadow: 5px 5px 20px rgba(0,0,0,0.2);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>z-index: 10000;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.wtcmanfield {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #f00;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>top: 2px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>left: 1px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zsCloudAttachmentIframe {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>height: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>z-index: 99999!important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>position: fixed;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>left: 0px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>top: 0px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #fff;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.wtchelpinfo {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-position: -246px -485px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>height: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>top: 2px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-image: url(https://static.zohocdn.com/zohodeskstatic/app/images/zs-mpro.b6c9cf2347c62390fdcb.png);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsMaxSizeMessage {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 13px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* ESTILOS RESPONSIVOS */</p>
-<p class="p1">body {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding-top: 80px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>min-height: 100vh;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>flex: 1;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFormClass {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 600px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>min-height: auto;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFormClass table {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFormClass td {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 100%!important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: left!important;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFormClass td[colspan="2"] {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center!important;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase textarea,</p>
-<p class="p1">#zohoSupportWebToCase input[type='text'],</p>
-<p class="p1">#zohoSupportWebToCase input[type='date'],</p>
-<p class="p1">#zohoSupportWebToCase select {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 100%!important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #f5f5f5;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase textarea:focus,</p>
-<p class="p1">#zohoSupportWebToCase input[type='text']:focus,</p>
-<p class="p1">#zohoSupportWebToCase input[type='date']:focus,</p>
-<p class="p1">#zohoSupportWebToCase select:focus {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zohoSupportWebToCase textarea {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>min-height: 120px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-family: Arial, sans-serif;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFormClass strong {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-family: Arial;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #000000;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: normal;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.form-instructions {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 25px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.field-example {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #999;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-style: italic;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Header fijo */</p>
-<p class="p1">.form-header {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>position: fixed;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>right: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 15px 30px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>z-index: 1000;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.form-header img {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 120px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>height: auto;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.form-header-title {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #000000;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: normal;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-family: Arial;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>left: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transform: translateX(-50%);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Footer */</p>
-<p class="p1">.form-footer {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-top: 1px solid #e0e0e0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 30px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Botones responsivos */</p>
-<p class="p1">.zsFormClass input[type='submit'],</p>
-<p class="p1">.zsFormClass input[type='button'] {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 12px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 5px 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 600;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFormClass input[type='submit'] {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #00b4a8;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: white;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFormClass input[type='submit']:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #009a8f;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFormClass input[type='button'] {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #f44336;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: white;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.zsFormClass input[type='button']:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #da190b;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Captcha responsivo */</p>
-<p class="p1">#zsCaptcha {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zsCaptcha img {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>height: auto;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Archivos adjuntos */</p>
-<p class="p1">.wtcuploadfile {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">#zsMaxSizeMessage,</p>
-<p class="p1">#zsMaxLimitMessage {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px!important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: block!important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>float: none!important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 5px 0!important;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Tablets */</p>
-<p class="p1">@media screen and (min-width: 768px) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.zsFormClass td {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display: table-cell;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.zsFormClass td[width='25%'] {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width: 25%!important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.zsFormClass td[width='75%'] {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width: 75%!important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>#zohoSupportWebToCase textarea,</p>
-<p class="p1"><span class="Apple-converted-space">    </span>#zohoSupportWebToCase input[type='text'],</p>
-<p class="p1"><span class="Apple-converted-space">    </span>#zohoSupportWebToCase select {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width: 280px!important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.zsFormClass input[type='submit'],</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.zsFormClass input[type='button'] {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width: auto;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>min-width: 120px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.button-container {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Móviles pequeños */</p>
-<p class="p1">@media screen and (max-width: 480px) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding-top: 70px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.zsFormClass {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.zsFormClass strong {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.form-instructions {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.field-example {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.zsFontClass {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>#zohoSupportWebToCase textarea,</p>
-<p class="p1"><span class="Apple-converted-space">    </span>#zohoSupportWebToCase input[type='text'],</p>
-<p class="p1"><span class="Apple-converted-space">    </span>#zohoSupportWebToCase select {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>#zohoSupportWebToCase td {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 8px 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.zsFormClass input[type='submit'],</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.zsFormClass input[type='button'] {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 10px 15px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.form-header {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 12px 15px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.form-header img {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>max-width: 80px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.form-header-title {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.4rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.zsFormClass strong {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.05rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.form-footer {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1">}</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script src='https://static.zohocdn.com/zohodeskstatic/app/js/jqueryandencoder.ef05974972bf3bca1b87.js'&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1">window.addEventListener('pageshow', function () {</p>
-<p class="p1">const submitButton = document.getElementById('zsSubmitButton_1245088000001074158');</p>
-<p class="p1">if (submitButton) {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>submitButton.removeAttribute('disabled');</p>
-<p class="p1">}</p>
-<p class="p1">const captchaTextField = document.forms['zsWebToCase_1245088000001074158']['zsWebFormCaptchaWord'];</p>
-<p class="p1">if(window.zsRegenerateCaptcha &amp;&amp; captchaTextField &amp;&amp; captchaTextField.value) {</p>
-<p class="p1">captchaTextField.value = '';</p>
-<p class="p1">captchaTextField.focus();</p>
-<p class="p1">zsRegenerateCaptcha();</p>
-<p class="p1">}</p>
-<p class="p1">});</p>
-<p class="p2"><br></p>
-<p class="p1">function trimBoth(str){</p>
-<p class="p1">return jQuery.trim(str);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function setAllDependancyFieldsMapping(){</p>
-<p class="p1">var mapDependancyLabels = getMapDependenySelectValues(jQuery("[id='property(module)']").val(), "JSON_MAP_DEP_LABELS");</p>
-<p class="p1">if(mapDependancyLabels){</p>
-<p class="p1">for(var i = 0; i &lt; mapDependancyLabels.length; i++){</p>
-<p class="p1">var label = mapDependancyLabels[i];</p>
-<p class="p1">var obj = document.forms['zsWebToCase_1245088000001074158'][label];</p>
-<p class="p1">if(obj){</p>
-<p class="p1">setDependent(obj, true);</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function getMapDependenySelectValues(module, key){</p>
-<p class="p1">var dependencyObj = jQuery.parseJSON( jQuery("[id='dependent_field_values_" + module + "']").val() );</p>
-<p class="p1">if(dependencyObj == undefined){</p>
-<p class="p1">return dependencyObj;</p>
-<p class="p1">}</p>
-<p class="p1">return dependencyObj[key];</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function setDependent(obj, isload){</p>
-<p class="p1">var name = obj.id || (obj[0] &amp;&amp; obj[0].id) || "";</p>
-<p class="p1">var module = jQuery("[id='property(module)']").val();</p>
-<p class="p1">var val = "";</p>
-<p class="p1">var myObject = getMapDependenySelectValues(module, "JSON_VALUES");</p>
-<p class="p1">if(myObject !=undefined){</p>
-<p class="p1">val = myObject[name];</p>
-<p class="p1">}</p>
-<p class="p1">var mySelObject = getMapDependenySelectValues(module, "JSON_SELECT_VALUES");</p>
-<p class="p1">if(val != null &amp;&amp; val != "" &amp;&amp; val != "null" &amp;&amp; mySelObject){</p>
-<p class="p1">var fields = val;</p>
-<p class="p1">for(var i in fields){</p>
-<p class="p1">if (fields.hasOwnProperty(i)){</p>
-<p class="p1">var isDependent = false;</p>
-<p class="p1">var label = i;</p>
-<p class="p1">var values = fields[i];</p>
-<p class="p1">if(label.indexOf(")") &gt; -1){</p>
-<p class="p1">label = label.replace(/\)/g, '_____');</p>
-<p class="p1">}</p>
-<p class="p1">if(label.indexOf("(") &gt; -1){</p>
-<p class="p1">label = label.replace(/\(/g, '____');</p>
-<p class="p1">}</p>
-<p class="p1">if(label.indexOf(".") &gt; -1){</p>
-<p class="p1">label = label.replace(/\./g, '___');</p>
-<p class="p1">}</p>
-<p class="p1">var depObj = document.forms['zsWebToCase_1245088000001074158'][label];</p>
-<p class="p1">if(depObj &amp;&amp; depObj.options){</p>
-<p class="p1">var mapValues = "";</p>
-<p class="p1">var selected_val = depObj.value;</p>
-<p class="p1">var depLen = depObj.options.length-1;</p>
-<p class="p1">for (var n = depLen; n &gt;= 0; n--) {</p>
-<p class="p1">if (depObj.options[n].selected){</p>
-<p class="p1">if(mapValues == ""){</p>
-<p class="p1">mapValues = depObj.options[n].value;</p>
-<p class="p1">}else{</p>
-<p class="p1">mapValues = mapValues + ";;;"+depObj.options[n].value;</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">depObj.value = "";</p>
-<p class="p1">var selectValues = mySelObject[label];</p>
-<p class="p1">for(var k in values){</p>
-<p class="p1">var rat = k;</p>
-<p class="p1">if(rat == "-None-"){</p>
-<p class="p1">rat = "";</p>
-<p class="p1">}</p>
-<p class="p1">var parentValues = mySelObject[name];</p>
-<p class="p1">if(rat == trimBoth(obj.value)){</p>
-<p class="p1">isDependent = true;</p>
-<p class="p1">depObj.length = 0;</p>
-<p class="p1">var depvalues = values[k];</p>
-<p class="p1">var depLen = depvalues.length - 1;</p>
-<p class="p1">for(var j = 0; j &lt;= depLen; j++){</p>
-<p class="p1">var optionElement = document.createElement("OPTION");</p>
-<p class="p1">var displayValue = depvalues[j];</p>
-<p class="p1">var actualValue = displayValue;</p>
-<p class="p1">if(actualValue == "-None-"){</p>
-<p class="p1">optionElement.value = "";</p>
-<p class="p1">displayValue = "-None-";</p>
-<p class="p1">}else{</p>
-<p class="p1">optionElement.value = actualValue;</p>
-<p class="p1">}</p>
-<p class="p1">optionElement.text = displayValue;</p>
-<p class="p1">if(mapValues != undefined){</p>
-<p class="p1">var mapValue = mapValues.split(";;;");</p>
-<p class="p1">var len = mapValue.length;</p>
-<p class="p1">for(var p = 0; p &lt; len; p++){</p>
-<p class="p1">if(actualValue == mapValue[p]){</p>
-<p class="p1">optionElement.selected = true;</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">depObj.options.add(optionElement);</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">if(!isDependent){</p>
-<p class="p1">depObj.length = 0;</p>
-<p class="p1">var len = selectValues.length;</p>
-<p class="p1">for(var j = 0; j &lt; len; j++){</p>
-<p class="p1">var actualValue = selectValues[j];</p>
-<p class="p1">var optionElement = document.createElement("OPTION");</p>
-<p class="p1">if(actualValue == "-None-"){</p>
-<p class="p1">optionElement.value = "";</p>
-<p class="p1">}else{</p>
-<p class="p1">optionElement.value = selectValues[j];</p>
-<p class="p1">}</p>
-<p class="p1">optionElement.text = selectValues[j];</p>
-<p class="p1">depObj.options.add(optionElement);</p>
-<p class="p1">}</p>
-<p class="p1">depObj.value =<span class="Apple-converted-space">  </span>selected_val;</p>
-<p class="p1">}</p>
-<p class="p1">if(!isload){</p>
-<p class="p1">setDependent(depObj,false);</p>
-<p class="p1">}</p>
-<p class="p1">var jdepObj = jQuery(depObj);</p>
-<p class="p1">if(jdepObj.hasClass('select2-offscreen')){</p>
-<p class="p1">jdepObj.select2("val", jdepObj.val());</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function setSelectAll(id){</p>
-<p class="p1">var parentElement = document.getElementById(id);</p>
-<p class="p1">var hiddenInput = parentElement.querySelector('#hiddenoptions');</p>
-<p class="p1">var selectAllElement = parentElement.querySelector('#selectall' + id);</p>
-<p class="p1">var selectedValues = [];</p>
-<p class="p1">var checkboxes = parentElement.querySelectorAll('.wb_multi_pick_input');</p>
-<p class="p1">checkboxes.forEach(function (cb) {</p>
-<p class="p1">cb.checked = selectAllElement.checked;</p>
-<p class="p1">if (cb.checked &amp;&amp; cb.value) {</p>
-<p class="p1">selectedValues.push(cb.value);</p>
-<p class="p1">}</p>
-<p class="p1">});</p>
-<p class="p1">hiddenInput.value = selectedValues.join(',');</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function setMultiSelectOption(id, obj){</p>
-<p class="p1">var parentElement = document.getElementById(id);</p>
-<p class="p1">var hiddenInput = parentElement.querySelector('#hiddenoptions');</p>
-<p class="p1">var selectAllElement = parentElement.querySelector('#selectall' + id);</p>
-<p class="p1">var selectedStr = hiddenInput.value;</p>
-<p class="p1">var selectedValues = selectedStr ? selectedStr.split(',') : [];</p>
-<p class="p1">if(obj.checked &amp;&amp; obj.value) {</p>
-<p class="p1">selectedValues.push(obj.value);</p>
-<p class="p1">}else if(!obj.checked &amp;&amp; obj.value) {</p>
-<p class="p1">selectedValues.splice(selectedValues.indexOf(obj.value), 1);</p>
-<p class="p1">selectAllElement.checked = false;</p>
-<p class="p1">}else {</p>
-<p class="p1">selectAllElement.checked = false;</p>
-<p class="p1">}</p>
-<p class="p1">hiddenInput.value = selectedValues.join(',');</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">var zctt = function(){</p>
-<p class="p1">var tt, mw = 400, top = 10, left = 0, doctt = document;</p>
-<p class="p1">var ieb = doctt.all ? true : false;</p>
-<p class="p1">return{</p>
-<p class="p1">showtt: function(cont, wid){</p>
-<p class="p1">if(tt == null){</p>
-<p class="p1">tt = doctt.createElement('div');</p>
-<p class="p1">tt.setAttribute('id', 'tooltip-zc');</p>
-<p class="p1">doctt.body.appendChild(tt);</p>
-<p class="p1">doctt.onmousemove = this.setpos;</p>
-<p class="p1">doctt.onclick = this.hidett;</p>
-<p class="p1">}</p>
-<p class="p1">tt.style.display = 'block';</p>
-<p class="p1">tt.innerHTML = cont;</p>
-<p class="p1">tt.style.width = wid ? wid + 'px' : 'auto';</p>
-<p class="p1">if(!wid &amp;&amp; ieb){</p>
-<p class="p1">tt.style.width = tt.offsetWidth;</p>
-<p class="p1">}</p>
-<p class="p1">if(tt.offsetWidth &gt; mw){</p>
-<p class="p1">tt.style.width = mw + 'px'</p>
-<p class="p1">}</p>
-<p class="p1">h = parseInt(tt.offsetHeight) + top;</p>
-<p class="p1">w = parseInt(tt.offsetWidth) + left;</p>
-<p class="p1">},</p>
-<p class="p1">hidett: function(){</p>
-<p class="p1">tt.style.display = 'none';</p>
-<p class="p1">},</p>
-<p class="p1">setpos: function(e){</p>
-<p class="p1">var u = ieb ? event.clientY + doctt.body.scrollTop : e.pageY;</p>
-<p class="p1">var l = ieb ? event.clientX + doctt.body.scrollLeft : e.pageX;</p>
-<p class="p1">var cw = doctt.body.clientWidth;</p>
-<p class="p1">var ch = doctt.body.clientHeight;</p>
-<p class="p1">if(l &lt; 0){</p>
-<p class="p1">tt.style.left = left + 'px';</p>
-<p class="p1">tt.style.right = '';</p>
-<p class="p1">}else if((l+w+left) &gt; cw){</p>
-<p class="p1">tt.style.left = '';</p>
-<p class="p1">tt.style.right = ((cw-l) + left) + 'px';</p>
-<p class="p1">}else{</p>
-<p class="p1">tt.style.right = '';</p>
-<p class="p1">tt.style.left = (l + left) + 'px';</p>
-<p class="p1">}</p>
-<p class="p1">if(u &lt; 0){</p>
-<p class="p1">tt.style.top = top + 'px';</p>
-<p class="p1">tt.style.bottom = '';</p>
-<p class="p1">}else if((u + h + left) &gt; ch){</p>
-<p class="p1">tt.style.top = '';</p>
-<p class="p1">tt.style.bottom = ((ch - u) + top) + 'px';</p>
-<p class="p1">}else{</p>
-<p class="p1">tt.style.bottom = '';</p>
-<p class="p1">tt.style.top = (u + top) + 'px';</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">};</p>
-<p class="p1">}();</p>
-<p class="p2"><br></p>
-<p class="p1">var zsWebFormMandatoryFields = new Array("Contact Name","Cliente","Email","Subject");</p>
-<p class="p1">var zsFieldsDisplayLabelArray = new Array("Nombre y Apellido","Empresa","Correo electrónico","Solicitud");</p>
-<p class="p2"><br></p>
-<p class="p1">function reformatAllDateFields() {</p>
-<p class="p1">const dateFields = document.querySelectorAll('.dob-field');</p>
-<p class="p1">dateFields.forEach(field =&gt; {</p>
-<p class="p1">if (field.value &amp;&amp; field.value.includes('-')) {</p>
-<p class="p1">const parts = field.value.split('-');</p>
-<p class="p1">if (parts.length === 3) {</p>
-<p class="p1">const [yyyy, mm, dd] = parts;</p>
-<p class="p1">field.type= 'text';</p>
-<p class="p1">field.value = `${dd}/${mm}/${yyyy}`;</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">});</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function zsValidateMandatoryFields(){</p>
-<p class="p1">var name = '';</p>
-<p class="p1">var email = '';</p>
-<p class="p1">var isError = 0;</p>
-<p class="p1">for(var index = 0; index &lt; zsWebFormMandatoryFields.length; index++){</p>
-<p class="p1">isError = 0;</p>
-<p class="p1">var fieldObject = document.forms['zsWebToCase_1245088000001074158'][zsWebFormMandatoryFields[index]];</p>
-<p class="p1">if(fieldObject){</p>
-<p class="p1">if(((fieldObject.value).replace(/^\s+|\s+$/g, '')).length == 0){</p>
-<p class="p1">alert(zsFieldsDisplayLabelArray[index] +' no puede estar vacío ');</p>
-<p class="p1">fieldObject.focus();</p>
-<p class="p1">isError = 1;</p>
-<p class="p1">return false;</p>
-<p class="p1">}else{</p>
-<p class="p1">if(fieldObject.name == 'Email'){</p>
-<p class="p1">if(!fieldObject.value.match(/^([\w_][\w\-_.+\'&amp;]*)@(?=.{4,256}$)(([\w]+)([\-_]*[\w])*[\.])+[a-zA-Z]{2,22}$/)){</p>
-<p class="p1">isError = 1;</p>
-<p class="p1">alert('Introduzca una ID de correo electrónico válida');</p>
-<p class="p1">fieldObject.focus();</p>
-<p class="p1">return false;</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">if(fieldObject.nodeName == 'SELECT'){</p>
-<p class="p1">if(fieldObject.options[fieldObject.selectedIndex].value == '-None-'){</p>
-<p class="p1">alert(zsFieldsDisplayLabelArray[index] +' no puede ser nulo');</p>
-<p class="p1">fieldObject.focus();</p>
-<p class="p1">isError = 1;</p>
-<p class="p1">return false;</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">if(fieldObject.type == 'checkbox'){</p>
-<p class="p1">if (fieldObject.checked == false){</p>
-<p class="p1">alert('Acepte por favor '+zsFieldsDisplayLabelArray[index]);</p>
-<p class="p1">fieldObject.focus();</p>
-<p class="p1">isError = 1;</p>
-<p class="p1">return false;</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">if(isError == 0){</p>
-<p class="p1">if(document.forms['zsWebToCase_1245088000001074158']['zsWebFormCaptchaWord'].value.replace(/^\s+|\s+$/g, '').length == 0){</p>
-<p class="p1">alert('Introduzca el código captcha');</p>
-<p class="p1">document.forms['zsWebToCase_1245088000001074158']['zsWebFormCaptchaWord'].focus();</p>
-<p class="p1">return false;</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">if(isError == 0){</p>
-<p class="p1">reformatAllDateFields();</p>
-<p class="p1">document.getElementById('zsSubmitButton_1245088000001074158').setAttribute('disabled', 'disabled');</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">var ZSEncoder = {</p>
-<p class="p1">encodeForHTML : function(str){</p>
-<p class="p1">if(str &amp;&amp; typeof(str)==='string'){</p>
-<p class="p1">return jQuery.encoder.encodeForHTML(str);</p>
-<p class="p1">}</p>
-<p class="p1">return str;</p>
-<p class="p1">},</p>
-<p class="p1">encodeForHTMLAttribute : function(str) {</p>
-<p class="p1">if(str &amp;&amp; typeof(str)==='string'){</p>
-<p class="p1">return jQuery.encoder.encodeForHTMLAttribute(str);</p>
-<p class="p1">}</p>
-<p class="p1">return str;</p>
-<p class="p1">},</p>
-<p class="p1">encodeForJavascript : function(str) {</p>
-<p class="p1">if(str &amp;&amp; typeof(str)==='string'){</p>
-<p class="p1">return jQuery.encoder.encodeForJavascript(str);</p>
-<p class="p1">}</p>
-<p class="p1">return str;</p>
-<p class="p1">},</p>
-<p class="p1">encodeForCSS : function(str) {</p>
-<p class="p1">if(str &amp;&amp; typeof(str)==='string'){</p>
-<p class="p1">return jQuery.encoder.encodeForCSS(str);</p>
-<p class="p1">}</p>
-<p class="p1">return str;</p>
-<p class="p1">}</p>
-<p class="p1">};</p>
-<p class="p2"><br></p>
-<p class="p1">var zsAttachedAttachmentsCount = 0;</p>
-<p class="p1">var zsAllowedAttachmentLimit = 4;</p>
-<p class="p1">var zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5];</p>
-<p class="p2"><br></p>
-<p class="p1">function zsOpenCloudPickerIframe(){</p>
-<p class="p1">if(zsAttachedAttachmentsCount &lt; 5){</p>
-<p class="p1">var zsCloudPickerIframeSrc = jQuery('#zsCloudPickerIframeSrc').val();</p>
-<p class="p1">jQuery('#zsCloudAttachmentIframe').attr('src', zsCloudPickerIframeSrc.substring(0, zsCloudPickerIframeSrc.length - 1) + (5 - zsAttachedAttachmentsCount)).show();</p>
-<p class="p1">zsListenCloudPickerMessages();</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function zsListenCloudPickerMessages(){</p>
-<p class="p1">if(window.addEventListener){</p>
-<p class="p1">window.addEventListener('message', zsWebReceiveMessage, false);</p>
-<p class="p1">}else if(window.attachEvent){</p>
-<p class="p1">window.attachEvent('onmessage', zsWebReceiveMessage);</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">var zsCloudPickerJSON = {};</p>
-<p class="p2"><br></p>
-<p class="p1">function zsWebReceiveMessage(event){</p>
-<p class="p1">var zsUrlRegex = /^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\:\'\/\\+=&amp;amp;%\$#_]*)?$/;</p>
-<p class="p1">if(zsUrlRegex.test(event.origin)){</p>
-<p class="p1">var zsMessageType = event.data.split('&amp;&amp;&amp;');</p>
-<p class="p1">if(zsMessageType[0] == 'zsCloudPickerMessage'){</p>
-<p class="p1">if(window.addEventListener){</p>
-<p class="p1">window.removeEventListener('message', zsWebReceiveMessage, false);</p>
-<p class="p1">}else if(window.attachEvent){</p>
-<p class="p1">window.detachEvent('onmessage', zsWebReceiveMessage );</p>
-<p class="p1">}</p>
-<p class="p1">jQuery('#zsCloudAttachmentIframe').hide();</p>
-<p class="p1">var isAttachedFilesDetails = zsMessageType[1].split('|||');</p>
-<p class="p1">if(isAttachedFilesDetails[0] == 'cloudPickerResponse'){</p>
-<p class="p1">var zsCloudPickerAttachmentDetails = isAttachedFilesDetails[1].split('::::');</p>
-<p class="p1">var zsCloudPickerAttachmentsJSON = jQuery.parseJSON(zsCloudPickerAttachmentDetails[0]);</p>
-<p class="p1">if(zsAttachedAttachmentsCount &lt;= zsAllowedAttachmentLimit){</p>
-<p class="p1">zsRenderCloudAttachments(zsCloudPickerAttachmentsJSON);</p>
-<p class="p1">}else{</p>
-<p class="p1">alert('No puede agregar más de 5 archivos');</p>
-<p class="p1">return false;</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function zsRenderCloudAttachments(zsCloudPickerAttachmentsJSON){</p>
-<p class="p1">if(!jQuery.isEmptyObject(zsCloudPickerAttachmentsJSON)){</p>
-<p class="p1">jQuery.each(zsCloudPickerAttachmentsJSON, function(cloudServiceName, attachments){</p>
-<p class="p1">var zsAttachmentsArray = [];</p>
-<p class="p1">if(!jQuery.isEmptyObject(zsCloudPickerJSON[cloudServiceName])){</p>
-<p class="p1">zsAttachmentsArray = zsCloudPickerJSON[cloudServiceName];</p>
-<p class="p1">}</p>
-<p class="p1">for(var attachmentsIndex = 0; attachmentsIndex &lt; attachments.length; attachmentsIndex++){</p>
-<p class="p1">if(zsAttachedAttachmentsCount &lt;= zsAllowedAttachmentLimit){</p>
-<p class="p1">var zsCloudAttachmentsList = '';</p>
-<p class="p1">var attachmentsDetailJSON = attachments[attachmentsIndex];</p>
-<p class="p1">var zsCloudAttachmentName = attachmentsDetailJSON['docName'];</p>
-<p class="p1">var extension = zsCloudAttachmentName.split('.').pop().toLowerCase();</p>
-<p class="p1">var unSupportedExtensions = ["ade","adp","apk","appx","appxbundle","bat","cab","cer","chm","cmd","com","cpl","dll","dmg","exe","hlp","hta","ins","iso","isp","jar","js","jse","lnk","mde","msc","msi","msix","msixbundle","msp","mst","nsh","pif","ps1","pst","reg","scr","sct","shb","sys","tmp","url","vb","vbe","vbs","vxd","wsc","wsf","wsh","terminal"];</p>
-<p class="p1">if(unSupportedExtensions.indexOf(extension)!=-1){</p>
-<p class="p1">alert("El archivo no se ha adjuntado porque su extensión no es compatible.");</p>
-<p class="p1">continue;</p>
-<p class="p1">}</p>
-<p class="p1">zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1;</p>
-<p class="p1">var zsCloudAttachmentId = attachmentsDetailJSON['docId'];</p>
-<p class="p1">zsCloudAttachmentId = zsCloudAttachmentId.replace(/\s/g, '');</p>
-<p class="p1">zsCloudAttachmentsList = '&lt;div class="filenamecls zsFontClass"&gt;&lt;span class="attachment-icon"&gt;📎&lt;/span&gt;'+ZSEncoder.encodeForHTML(zsCloudAttachmentName)+'&lt;button type="button" id="'+ ZSEncoder.encodeForHTMLAttribute(zsCloudAttachmentId) +'" cloudservice="'+ ZSEncoder.encodeForHTMLAttribute(cloudServiceName) +'" class="zscloudAttachment"&gt;×&lt;/button&gt;&lt;/div&gt;';</p>
-<p class="p1">jQuery('#zsFileBrowseAttachments').append(zsCloudAttachmentsList);</p>
-<p class="p1">zsAttachmentsArray.push(attachmentsDetailJSON);</p>
-<p class="p1">zsCloudPickerJSON[cloudServiceName] = zsAttachmentsArray;</p>
-<p class="p1">jQuery("input[name='zsCloudPickerAttachments']")[0].value = JSON.stringify(zsCloudPickerJSON);</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">});</p>
-<p class="p1">}</p>
-<p class="p1">zsChangeMousePointer();</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">jQuery(document).off('click.cAtm').on('click.cAtm','.zscloudAttachment', function(){</p>
-<p class="p1">var cloudService = jQuery(this).attr('cloudservice');</p>
-<p class="p1">var cloudAttachmentId = jQuery(this).attr('id');</p>
-<p class="p1">var zsCloudAttachmentsArr = zsCloudPickerJSON[cloudService];</p>
-<p class="p1">var isZsCloudAttachmentRemoved = 0;</p>
-<p class="p1">for(var attachmentsIndex = 0; attachmentsIndex &lt; zsCloudAttachmentsArr.length; attachmentsIndex++){</p>
-<p class="p1">if(isZsCloudAttachmentRemoved != 1){</p>
-<p class="p1">jQuery.each(zsCloudAttachmentsArr[attachmentsIndex], function(attachmentsDetailJsonKey, attachmentsDetailJsonValue){</p>
-<p class="p1">if(attachmentsDetailJsonKey == 'docId' &amp;&amp; attachmentsDetailJsonValue.replace(/\s/g, '') == cloudAttachmentId){</p>
-<p class="p1">var zsAttachmentToBeRemoved = jQuery.inArray(zsCloudAttachmentsArr[attachmentsIndex], zsCloudAttachmentsArr);</p>
-<p class="p1">zsCloudAttachmentsArr.splice(zsAttachmentToBeRemoved, 1);</p>
-<p class="p1">isZsCloudAttachmentRemoved = 1;</p>
-<p class="p1">}</p>
-<p class="p1">});</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">jQuery(this).parent().remove();</p>
-<p class="p1">zsAttachedAttachmentsCount = zsAttachedAttachmentsCount - 1;</p>
-<p class="p1">jQuery("input[name='zsCloudPickerAttachments']")[0].value = JSON.stringify(zsCloudPickerJSON);</p>
-<p class="p1">zsChangeMousePointer();</p>
-<p class="p1">});</p>
-<p class="p2"><br></p>
-<p class="p1">function zsRenderBrowseFileAttachment(zsAttachmentObject, zsAttachmentDetails){</p>
-<p class="p1">if(zsAttachmentObject != ''){</p>
-<p class="p1">if((zsAttachmentDetails.files &amp;&amp; (zsAttachmentDetails.files[0].size/(1024*1024))&gt;20)){</p>
-<p class="p1">zsAttachmentDetails.value='';</p>
-<p class="p1">alert('El tamaño de archivo máximo permitido es 20MB.');</p>
-<p class="p1">return;</p>
-<p class="p1">}</p>
-<p class="p1">if(zsAttachedAttachmentsCount &lt; 5){</p>
-<p class="p1">var zsFileName='';</p>
-<p class="p1">if((zsAttachmentObject.indexOf('\\') &gt; -1)){</p>
-<p class="p1">var zsAttachmentDataSplits = zsAttachmentObject.split('\\');</p>
-<p class="p1">var zsAttachmentDataSplitsLen = zsAttachmentDataSplits.length;</p>
-<p class="p1">zsFileName = zsAttachmentDataSplits[zsAttachmentDataSplitsLen - 1];</p>
-<p class="p1">}else{</p>
-<p class="p1">zsFileName = zsAttachmentObject;</p>
-<p class="p1">}</p>
-<p class="p1">var extension = zsFileName.split('.').pop().toLowerCase();</p>
-<p class="p1">var unSupportedExtensions = ["ade","adp","apk","appx","appxbundle","bat","cab","cer","chm","cmd","com","cpl","dll","dmg","exe","hlp","hta","ins","iso","isp","jar","js","jse","lnk","mde","msc","msi","msix","msixbundle","msp","mst","nsh","pif","ps1","pst","reg","scr","sct","shb","sys","tmp","url","vb","vbe","vbs","vxd","wsc","wsf","wsh","terminal"];</p>
-<p class="p1">if(unSupportedExtensions.indexOf(extension)!=-1){</p>
-<p class="p1">alert("El archivo no se ha adjuntado porque su extensión no es compatible.");</p>
-<p class="p1">return;</p>
-<p class="p1">}</p>
-<p class="p1">var zsCurrentAttachmentIdTokens = jQuery(zsAttachmentDetails).attr('id').split('_');</p>
-<p class="p1">var zsCurrentAttachmentId = parseInt(zsCurrentAttachmentIdTokens[1]);</p>
-<p class="p1">var zsAttachmentIdToBeRemoved = jQuery.inArray(zsCurrentAttachmentId, zsAttachmentFileBrowserIdsList);</p>
-<p class="p1">zsAttachmentFileBrowserIdsList.splice(zsAttachmentIdToBeRemoved, 1);</p>
-<p class="p1">var zsNextAttachmentId = zsAttachmentFileBrowserIdsList[0];</p>
-<p class="p1">var zsnextAttachment = 'zsattachment_'+zsNextAttachmentId;</p>
-<p class="p1">jQuery('#zsattachment_'+zsCurrentAttachmentId).hide();</p>
-<p class="p1">jQuery('#'+zsnextAttachment).show();</p>
-<p class="p1">jQuery('#zsFileBrowseAttachments').append('&lt;div class="filenamecls zsFontClass" id="file_'+zsCurrentAttachmentId+'"&gt;&lt;span class="attachment-icon"&gt;📎&lt;/span&gt;'+ ZSEncoder.encodeForHTML(zsFileName) + '&lt;button type="button" class="zsfilebrowseAttachment" id="fileclose_'+zsCurrentAttachmentId+'"&gt;×&lt;/button&gt;&lt;/div&gt;');</p>
-<p class="p1">zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1;</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p1">zsChangeMousePointer();</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">jQuery(document).off('click.fba').on('click.fba', '.zsfilebrowseAttachment', function(){</p>
-<p class="p1">var currentlyDeletedElement = jQuery(this).attr('id').split('_')[1];</p>
-<p class="p1">jQuery('#zsattachment_'+currentlyDeletedElement).val('');</p>
-<p class="p1">jQuery('#zsattachment_'+currentlyDeletedElement).replaceWith(jQuery('#zsattachment_'+currentlyDeletedElement).clone());</p>
-<p class="p1">jQuery(this).parent().remove();</p>
-<p class="p1">zsAttachedAttachmentsCount = zsAttachedAttachmentsCount - 1;</p>
-<p class="p1">zsAttachmentFileBrowserIdsList.push(parseInt(currentlyDeletedElement));</p>
-<p class="p1">zsRearrangeFileBrowseAttachments();</p>
-<p class="p1">zsChangeMousePointer();</p>
-<p class="p1">});</p>
-<p class="p2"><br></p>
-<p class="p1">function zsRearrangeFileBrowseAttachments(){</p>
-<p class="p1">jQuery.each(jQuery('input[type = file]'), function(fileIndex, fileObject){</p>
-<p class="p1">fileIndex = fileIndex + 1;</p>
-<p class="p1">if(fileIndex == zsAttachmentFileBrowserIdsList[0]){</p>
-<p class="p1">jQuery('#zsattachment_'+fileIndex).show();</p>
-<p class="p1">}else{</p>
-<p class="p1">jQuery('#zsattachment_'+fileIndex).hide();</p>
-<p class="p1">}</p>
-<p class="p1">});</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function zsOpenFileBrowseAttachment(clickEvent){</p>
-<p class="p1">if(zsAttachedAttachmentsCount &gt;= 5){</p>
-<p class="p1">clickEvent.preventDefault();</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function zsChangeMousePointer(){</p>
-<p class="p1">if(zsAttachedAttachmentsCount &gt;= 5){</p>
-<p class="p1">jQuery('#zsMaxLimitMessage').show();</p>
-<p class="p1">jQuery('#zsattachment_1,#zsattachment_2,#zsattachment_3,#zsattachment_4,#zsattachment_5').hide();</p>
-<p class="p1">jQuery('#zsBrowseAttachment,#zsCloudAttachment').css('cursor', 'default');</p>
-<p class="p1">}else{</p>
-<p class="p1">jQuery('#zsMaxLimitMessage').hide();</p>
-<p class="p1">zsRearrangeFileBrowseAttachments();</p>
-<p class="p1">jQuery('#zsBrowseAttachment,#zsCloudAttachment').css('cursor', 'pointer');</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function zsShowCaptcha(){</p>
-<p class="p1">jQuery('#zsCaptchaLoading').hide();</p>
-<p class="p1">jQuery('#zsCaptcha').show();</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function zsRegenerateCaptcha(){</p>
-<p class="p1">var webFormxhr = {};</p>
-<p class="p1">webFormxhr = new XMLHttpRequest();</p>
-<p class="p1">webFormxhr.open('GET','https://desk.zoho.com/support/GenerateCaptcha?action=getNewCaptcha&amp;_='+new Date().getTime(),true);</p>
-<p class="p1">webFormxhr.onreadystatechange = function () {</p>
-<p class="p1">if(webFormxhr.readyState === 4 &amp;&amp; webFormxhr.status === 200) {</p>
-<p class="p1">try{</p>
-<p class="p1">var response = (webFormxhr.responseText != null) ? JSON.parse(webFormxhr.responseText) : '';</p>
-<p class="p1">jQuery('#zsCaptchaUrl').load(zsShowCaptcha);</p>
-<p class="p1">document.getElementById('zsCaptchaUrl').src = response.captchaUrl;</p>
-<p class="p1">document.getElementsByName('xJdfEaS')[0].value = response.captchaDigest;</p>
-<p class="p1">}catch(e){}</p>
-<p class="p1">}</p>
-<p class="p1">};</p>
-<p class="p1">webFormxhr.send();</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">document.addEventListener('readystatechange',function(){</p>
-<p class="p1">if(document.readyState === 'complete' &amp;&amp; window.zsRegenerateCaptcha){</p>
-<p class="p1">zsRegenerateCaptcha();</p>
-<p class="p1">}</p>
-<p class="p1">setAllDependancyFieldsMapping();</p>
-<p class="p1">document.getElementById('zsSubmitButton_1245088000001074158').removeAttribute('disabled');</p>
-<p class="p1">zsAttachedAttachmentsCount = 0;</p>
-<p class="p1">zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5];</p>
-<p class="p1">document.forms['zsWebToCase_1245088000001074158']['zsWebFormCaptchaWord'].value = '';</p>
-<p class="p1">jQuery('#zsFileBrowseAttachments').html('');</p>
-<p class="p1">jQuery.each(jQuery('input[type = file]'), function(fileIndex, fileObject){</p>
-<p class="p1">var zsAttachmentId = jQuery(fileObject).attr('id');</p>
-<p class="p1">var zsAttachmentNo = zsAttachmentId.split('_')[1];</p>
-<p class="p1">var zsAttachedFile = jQuery('#zsattachment_'+zsAttachmentNo);</p>
-<p class="p1">if(zsAttachedFile[0] != undefined &amp;&amp; zsAttachedFile[0].files[0] != undefined){</p>
-<p class="p1">var zsFileBrowserAttachmentHtml = '';</p>
-<p class="p1">zsAttachedFileName = zsAttachedFile[0].files[0].name;</p>
-<p class="p1">zsFileBrowserAttachmentHtml = '&lt;div class="filenamecls zsFontClass" id="file_'+zsAttachmentNo+'"&gt;&lt;span class="attachment-icon"&gt;📎&lt;/span&gt;'+ ZSEncoder.encodeForHTML(zsAttachedFileName) +'&lt;button type="button" class="zsfilebrowseAttachment" id="fileclose_'+zsAttachmentNo+'"&gt;×&lt;/button&gt;&lt;/div&gt;';</p>
-<p class="p1">jQuery('#zsFileBrowseAttachments').append(zsFileBrowserAttachmentHtml);</p>
-<p class="p1">zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1;</p>
-<p class="p1">var zsAttachmentIdToBeRemoved = jQuery.inArray(parseInt(zsAttachmentNo), zsAttachmentFileBrowserIdsList);</p>
-<p class="p1">zsAttachmentFileBrowserIdsList.splice(zsAttachmentIdToBeRemoved, 1);</p>
-<p class="p1">}</p>
-<p class="p1">});</p>
-<p class="p1">if(document.forms['zsWebToCase_1245088000001074158']['zsCloudPickerAttachments'] != undefined){</p>
-<p class="p1">var zsCloudAttachments = jQuery.parseJSON(document.forms['zsWebToCase_1245088000001074158']['zsCloudPickerAttachments'].value);</p>
-<p class="p1">zsRenderCloudAttachments(zsCloudAttachments);</p>
-<p class="p1">}</p>
-<p class="p1">zsRearrangeFileBrowseAttachments();</p>
-<p class="p1">zsChangeMousePointer();</p>
-<p class="p1">});</p>
-<p class="p2"><br></p>
-<p class="p1">function zsResetWebForm(webFormId){</p>
-<p class="p1">document.forms['zsWebToCase_'+webFormId].reset();</p>
-<p class="p1">document.getElementById('zsSubmitButton_1245088000001074158').removeAttribute('disabled');</p>
-<p class="p1">setAllDependancyFieldsMapping();</p>
-<p class="p1">zsAttachedAttachmentsCount = 0;</p>
-<p class="p1">zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5];</p>
-<p class="p1">jQuery('#zsFileBrowseAttachments').html('');</p>
-<p class="p1">zsCloudPickerJSON = {};</p>
-<p class="p1">if(document.forms['zsWebToCase_1245088000001074158']['zsCloudPickerAttachments'] != undefined){</p>
-<p class="p1">document.forms['zsWebToCase_1245088000001074158']['zsCloudPickerAttachments'].value = JSON.stringify({});</p>
-<p class="p1">}</p>
-<p class="p1">zsRearrangeFileBrowseAttachments();</p>
-<p class="p1">zsChangeMousePointer();</p>
-<p class="p1">}</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Header fijo con logo y título --&gt;</p>
-<p class="p1">&lt;div class="form-header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://www.queop.com/img/2024/logo_header.png" alt="Queop Logo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="form-header-title"&gt;Soporte Queop Colombia&lt;/h1&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div id='zohoSupportWebToCase' align='center'&gt;</p>
-<p class="p1">&lt;form name='zsWebToCase_1245088000001074158' id='zsWebToCase_1245088000001074158' action='https://desk.zoho.com/support/WebToCase' method='POST' onSubmit='return zsValidateMandatoryFields()' enctype='multipart/form-data'&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;input type='hidden' name='xnQsjsdp' value='edbsnefecad80b15b2c1fecf4dc408cae5693'/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;input type='hidden' name='xmIwtLD' value='edbsn457e619e10b66b7ff45a379417b9d81ffb02b6bda1bdc3e14782a770a0db4813'/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;input type='hidden' name='xJdfEaS' value=''/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;input type='hidden' name='actionType' value='Q2FzZXM='/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;input type="hidden" id="property(module)" value="Cases"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;input type="hidden" id="dependent_field_values_Cases" value="{&amp;#34;JSON_VALUES&amp;#34;:{},&amp;#34;JSON_SELECT_VALUES&amp;#34;:{},&amp;#34;JSON_MAP_DEP_LABELS&amp;#34;:[]}"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;input type='hidden' name='returnURL' value='https://www.queop.com/'/&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1">&lt;table border='0' cellspacing='0' class='zsFormClass'&gt;</p>
-<p class="p1">&lt;tr&gt;</p>
-<p class="p1">&lt;td colspan='2' class='zsFontClass'&gt;</p>
-<p class="p1">&lt;strong&gt;Formulario Solicitudes&lt;/strong&gt;</p>
-<p class="p1">&lt;div class="form-instructions"&gt;</p>
-<p class="p1">Ingresa tus datos, describe tu solicitud y adjunta archivos si es necesario. Presiona Enviar y nuestro equipo la atenderá a la brevedad.</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/td&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;tr&gt;</p>
-<p class="p1">&lt;td nowrap class='zsFontClass' width='25%' align='left'&gt;Nombre y Apellido&amp;nbsp;&amp;nbsp;&lt;/td&gt;</p>
-<p class="p1">&lt;td align='left' width='75%'&gt;&lt;input type='text' maxlength='120' name='Contact Name' class='manfieldbdr'/&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;tr&gt;</p>
-<p class="p1">&lt;td nowrap class='zsFontClass' width='25%' align='left'&gt;Empresa&amp;nbsp;&amp;nbsp;&lt;/td&gt;</p>
-<p class="p1">&lt;td align='left' width='75%'&gt;&lt;input type='text' maxlength='120' name='Cliente' value='' class='manfieldbdr'/&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;tr&gt;</p>
-<p class="p1">&lt;td nowrap class='zsFontClass' width='25%' align='left'&gt;Correo electrónico&amp;nbsp;&amp;nbsp;&lt;/td&gt;</p>
-<p class="p1">&lt;td align='left' width='75%'&gt;&lt;input type='text' maxlength='120' name='Email' value='' class='manfieldbdr'/&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;tr&gt;</p>
-<p class="p1">&lt;td nowrap class='zsFontClass' width='25%' align='left'&gt;Solicitud&amp;nbsp;&amp;nbsp;&lt;/td&gt;</p>
-<p class="p1">&lt;td align='left' width='75%'&gt;</p>
-<p class="p1">&lt;select name='Subject' class='manfieldbdr' required&gt;</p>
-<p class="p1">&lt;option value=''&gt;Selecciona una opción&lt;/option&gt;</p>
-<p class="p1">&lt;option value='Crear / editar usuarios'&gt;Crear / editar usuarios&lt;/option&gt;</p>
-<p class="p1">&lt;option value='Plataforma web y text analytics'&gt;Plataforma web y text analytics&lt;/option&gt;</p>
-<p class="p1">&lt;option value='Reportes Automáticos'&gt;Reportes Automáticos&lt;/option&gt;</p>
-<p class="p1">&lt;option value='Soporte de tablets e instalaciones'&gt;Soporte de tablets e instalaciones&lt;/option&gt;</p>
-<p class="p1">&lt;option value='Envío de Campañas'&gt;Envío de Campañas&lt;/option&gt;</p>
-<p class="p1">&lt;option value='Otros'&gt;Otros&lt;/option&gt;</p>
-<p class="p1">&lt;/select&gt;</p>
-<p class="p1">&lt;span class="field-example"&gt;Elige la opción que mejor describa tu solicitud&lt;/span&gt;</p>
-<p class="p1">&lt;/td&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;tr&gt;</p>
-<p class="p1">&lt;td nowrap class='zsFontClass' width='25%' align='left'&gt;Detalle Solicitud&amp;nbsp;&amp;nbsp;&lt;/td&gt;</p>
-<p class="p1">&lt;td align='left' width='75%'&gt;</p>
-<p class="p1">&lt;textarea name='Description' maxlength='3000' width='250' height='250'&gt;&lt;/textarea&gt;</p>
-<p class="p1">&lt;span class="field-example"&gt;Ej: El nuevo usuario es para ejemplo@queop.com&lt;/span&gt;</p>
-<p class="p1">&lt;/td&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;tr&gt;</p>
-<p class="p1">&lt;td nowrap class='zsFontClass' width='25%' align='left'&gt;Adjunto&amp;nbsp;&amp;nbsp;&lt;/td&gt;</p>
-<p class="p1">&lt;td align='left' width='75%'&gt;</p>
-<p class="p1">&lt;span class="zsFontClass wtcuploadfile" id="zsBrowseAttachment"&gt;Adjuntar archivos&lt;/span&gt;</p>
-<p class="p1">&lt;input class="wtcuploadinput" type='file' name='attachment_1' id='zsattachment_1' style='display:block;' onclick='zsOpenFileBrowseAttachment(event)' onchange='zsRenderBrowseFileAttachment(this.value, this)'/&gt;</p>
-<p class="p1">&lt;input class="wtcuploadinput" type='file' name='attachment_2' id='zsattachment_2' style='display:none;' onclick='zsOpenFileBrowseAttachment(event)' onchange='zsRenderBrowseFileAttachment(this.value, this)'/&gt;</p>
-<p class="p1">&lt;input class="wtcuploadinput" type='file' name='attachment_3' id='zsattachment_3' style='display:none;' onclick='zsOpenFileBrowseAttachment(event)' onchange='zsRenderBrowseFileAttachment(this.value, this)'/&gt;</p>
-<p class="p1">&lt;input class="wtcuploadinput" type='file' name='attachment_4' id='zsattachment_4' style='display:none;' onclick='zsOpenFileBrowseAttachment(event)' onchange='zsRenderBrowseFileAttachment(this.value, this)'/&gt;</p>
-<p class="p1">&lt;input class="wtcuploadinput" type='file' name='attachment_5' id='zsattachment_5' style='display:none;' onclick='zsOpenFileBrowseAttachment(event)' onchange='zsRenderBrowseFileAttachment(this.value, this)'/&gt;</p>
-<p class="p1">&lt;div class="clboth"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;span id='zsMaxSizeMessage' style='color:black;font-size: 8px;float: left;'&gt;Cada archivo puede tener hasta 20 MB de tamaño.&lt;/span&gt;</p>
-<p class="p1">&lt;span id='zsMaxLimitMessage' style='color:black;font-size: 8px;float: left;margin-left: 14px;display: none;'&gt;Puede adjuntar un máximo de 5 archivos a la vez.&lt;/span&gt;</p>
-<p class="p1">&lt;div id='zsFileBrowseAttachments'&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/td&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;tr&gt;</p>
-<p class="p1">&lt;td nowrap class='zsFontClass' width='25%' align='left'&gt;Captcha&amp;nbsp;&lt;/td&gt;</p>
-<p class="p1">&lt;td&gt;</p>
-<p class="p1">&lt;div id='zsCaptchaLoading'&gt;&lt;strong&gt;Cargando…&lt;br&gt;&lt;br&gt;&lt;/strong&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div id='zsCaptcha' style='display:none;'&gt;</p>
-<p class="p1">&lt;img src='#' id='zsCaptchaUrl' name="zsCaptchaImage"&gt;</p>
-<p class="p1">&lt;a href='javascript:;' style='color:#00a3fe; cursor:pointer; margin-left:10px; vertical-align:middle;text-decoration: none; font-size:11px;' class='zsFontClass' onclick='zsRegenerateCaptcha()'&gt;Actualizar&lt;/a&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;input type='text' name='zsWebFormCaptchaWord'/&gt;</p>
-<p class="p1">&lt;input type='hidden' name='zsCaptchaSrc' value=''/&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/td&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;tr&gt;</p>
-<p class="p1">&lt;td style='padding: 11px 5px 0px 5px;' colspan='2' width='25%'&gt;</p>
-<p class="p1">&lt;div class="button-container"&gt;</p>
-<p class="p1">&lt;input type='button' class='zsFontClass' value='Restablecer' onclick="zsResetWebForm('1245088000000523070')"&gt;</p>
-<p class="p1">&lt;input type='submit' id="zsSubmitButton_1245088000000523070" class='zsFontClass' value='Enviar'&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/td&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;/table&gt;</p>
-<p class="p1">&lt;/form&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Footer --&gt;</p>
-<p class="p1">&lt;div class="form-footer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>© Queop. Todos los derechos reservados.</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1">// Script para comunicar la altura al iframe padre (Google Sites)</p>
-<p class="p1">function enviarAltura() {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var altura = document.body.scrollHeight;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>window.parent.postMessage({</p>
-<p class="p1"><span class="Apple-converted-space">        </span>tipo: 'ajustarAltura',</p>
-<p class="p1"><span class="Apple-converted-space">        </span>altura: altura</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}, '*');</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">// Enviar altura al cargar</p>
-<p class="p1">window.addEventListener('load', enviarAltura);</p>
-<p class="p2"><br></p>
-<p class="p1">// Enviar altura cuando cambie el contenido</p>
-<p class="p1">var observer = new MutationObserver(enviarAltura);</p>
-<p class="p1">observer.observe(document.body, {<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>childList: true,<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>subtree: true,<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>attributes: true<span class="Apple-converted-space"> </span></p>
-<p class="p1">});</p>
-<p class="p2"><br></p>
-<p class="p1">// Enviar altura cada 500ms por si acaso</p>
-<p class="p1">setInterval(enviarAltura, 500);</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<!-- Header fijo con logo y título -->
+<div class="form-header">
+    <img src="https://www.queop.com/img/2024/logo_header.png" alt="Queop Logo">
+    <h1 class="form-header-title">Soporte Queop Colombia</h1>
+</div>
+
+<div id='zohoSupportWebToCase' align='center'>
+<form name='zsWebToCase_1245088000001074158' id='zsWebToCase_1245088000001074158' action='https://desk.zoho.com/support/WebToCase' method='POST' onSubmit='return zsValidateMandatoryFields()' enctype='multipart/form-data'>
+  <input type='hidden' name='xnQsjsdp' value='edbsnefecad80b15b2c1fecf4dc408cae5693'/>
+  <input type='hidden' name='xmIwtLD' value='edbsn457e619e10b66b7ff45a379417b9d81ffb02b6bda1bdc3e14782a770a0db4813'/>
+  <input type='hidden' name='xJdfEaS' value=''/>
+  <input type='hidden' name='actionType' value='Q2FzZXM='/>
+  <input type="hidden" id="property(module)" value="Cases"/>
+  <input type="hidden" id="dependent_field_values_Cases" value="{&#34;JSON_VALUES&#34;:{},&#34;JSON_SELECT_VALUES&#34;:{},&#34;JSON_MAP_DEP_LABELS&#34;:[]}"/>
+  <input type='hidden' name='returnURL' value='https://www.queop.com/'/>
+  
+<table border='0' cellspacing='0' class='zsFormClass'>
+<tr>
+<td colspan='2' class='zsFontClass'>
+<strong>Formulario Solicitudes</strong>
+<div class="form-instructions">
+Ingresa tus datos, describe tu solicitud y adjunta archivos si es necesario. Presiona Enviar y nuestro equipo la atenderá a la brevedad.
+</div>
+</td>
+</tr>
+<tr>
+<td nowrap class='zsFontClass' width='25%' align='left'>Nombre y Apellido&nbsp;&nbsp;</td>
+<td align='left' width='75%'><input type='text' maxlength='120' name='Contact Name' class='manfieldbdr'/></td>
+</tr>
+<tr>
+<td nowrap class='zsFontClass' width='25%' align='left'>Empresa&nbsp;&nbsp;</td>
+<td align='left' width='75%'><input type='text' maxlength='120' name='Cliente' value='' class='manfieldbdr'/></td>
+</tr>
+<tr>
+<td nowrap class='zsFontClass' width='25%' align='left'>Correo electrónico&nbsp;&nbsp;</td>
+<td align='left' width='75%'><input type='text' maxlength='120' name='Email' value='' class='manfieldbdr'/></td>
+</tr>
+<tr>
+<td nowrap class='zsFontClass' width='25%' align='left'>Solicitud&nbsp;&nbsp;</td>
+<td align='left' width='75%'>
+<select name='Subject' class='manfieldbdr' required>
+<option value=''>Selecciona una opción</option>
+<option value='Crear / editar usuarios'>Crear / editar usuarios</option>
+<option value='Plataforma web y text analytics'>Plataforma web y text analytics</option>
+<option value='Reportes Automáticos'>Reportes Automáticos</option>
+<option value='Soporte de tablets e instalaciones'>Soporte de tablets e instalaciones</option>
+<option value='Envío de Campañas'>Envío de Campañas</option>
+<option value='Otros'>Otros</option>
+</select>
+<span class="field-example">Elige la opción que mejor describa tu solicitud</span>
+</td>
+</tr>
+<tr>
+<td nowrap class='zsFontClass' width='25%' align='left'>Detalle Solicitud&nbsp;&nbsp;</td>
+<td align='left' width='75%'>
+<textarea name='Description' maxlength='3000' width='250' height='250'></textarea>
+<span class="field-example">Ej: El nuevo usuario es para ejemplo@queop.com</span>
+</td>
+</tr>
+<tr>
+<td nowrap class='zsFontClass' width='25%' align='left'>Adjunto&nbsp;&nbsp;</td>
+<td align='left' width='75%'>
+<span class="zsFontClass wtcuploadfile" id="zsBrowseAttachment">Adjuntar archivos</span>
+<input class="wtcuploadinput" type='file' name='attachment_1' id='zsattachment_1' style='display:block;' onclick='zsOpenFileBrowseAttachment(event)' onchange='zsRenderBrowseFileAttachment(this.value, this)'/>
+<input class="wtcuploadinput" type='file' name='attachment_2' id='zsattachment_2' style='display:none;' onclick='zsOpenFileBrowseAttachment(event)' onchange='zsRenderBrowseFileAttachment(this.value, this)'/>
+<input class="wtcuploadinput" type='file' name='attachment_3' id='zsattachment_3' style='display:none;' onclick='zsOpenFileBrowseAttachment(event)' onchange='zsRenderBrowseFileAttachment(this.value, this)'/>
+<input class="wtcuploadinput" type='file' name='attachment_4' id='zsattachment_4' style='display:none;' onclick='zsOpenFileBrowseAttachment(event)' onchange='zsRenderBrowseFileAttachment(this.value, this)'/>
+<input class="wtcuploadinput" type='file' name='attachment_5' id='zsattachment_5' style='display:none;' onclick='zsOpenFileBrowseAttachment(event)' onchange='zsRenderBrowseFileAttachment(this.value, this)'/>
+<div class="clboth"></div>
+<span id='zsMaxSizeMessage' style='color:black;font-size: 8px;float: left;'>Cada archivo puede tener hasta 20 MB de tamaño.</span>
+<span id='zsMaxLimitMessage' style='color:black;font-size: 8px;float: left;margin-left: 14px;display: none;'>Puede adjuntar un máximo de 5 archivos a la vez.</span>
+<div id='zsFileBrowseAttachments'></div>
+</td>
+</tr>
+<tr>
+<td nowrap class='zsFontClass' width='25%' align='left'>Captcha&nbsp;</td>
+<td>
+<div id='zsCaptchaLoading'><strong>Cargando…<br><br></strong></div>
+<div id='zsCaptcha' style='display:none;'>
+<img src='#' id='zsCaptchaUrl' name="zsCaptchaImage">
+<a href='javascript:;' style='color:#00a3fe; cursor:pointer; margin-left:10px; vertical-align:middle;text-decoration: none; font-size:11px;' class='zsFontClass' onclick='zsRegenerateCaptcha()'>Actualizar</a>
+</div>
+<div>
+<input type='text' name='zsWebFormCaptchaWord'/>
+<input type='hidden' name='zsCaptchaSrc' value=''/>
+</div>
+</td>
+</tr>
+<tr>
+<td style='padding: 11px 5px 0px 5px;' colspan='2' width='25%'>
+<div class="button-container">
+<input type='button' class='zsFontClass' value='Restablecer' onclick="zsResetWebForm('1245088000000523070')">
+<input type='submit' id="zsSubmitButton_1245088000000523070" class='zsFontClass' value='Enviar'>
+</div>
+</td>
+</tr>
+</table>
+</form>
+</div>
+
+<!-- Footer -->
+<div class="form-footer">
+    © Queop. Todos los derechos reservados.
+</div>
+
+<script>
+// Script para comunicar la altura al iframe padre (Google Sites)
+function enviarAltura() {
+    var altura = document.body.scrollHeight;
+    window.parent.postMessage({
+        tipo: 'ajustarAltura',
+        altura: altura
+    }, '*');
+}
+
+// Enviar altura al cargar
+window.addEventListener('load', enviarAltura);
+
+// Enviar altura cuando cambie el contenido
+var observer = new MutationObserver(enviarAltura);
+observer.observe(document.body, { 
+    childList: true, 
+    subtree: true, 
+    attributes: true 
+});
+
+// Enviar altura cada 500ms por si acaso
+setInterval(enviarAltura, 500);
+</script>
+
 </body>
 </html>
